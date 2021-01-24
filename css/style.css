@@ -11,12 +11,23 @@
     src: url('../Raif_Fonts/type.today-navigo-web/Navigo-Regular-Web.eot') format('eot');
     src: url('../Raif_Fonts/type.today-navigo-web/Navigo-Regular-Web.ttf') format('ttf');
     src: url('../Raif_Fonts/type.today-navigo-web/Navigo-Regular-Web.woff2') format('woff2');
+}
 
+@font-face {
+    font-family: 'Navigo';
     src: url('../Raif_Fonts/type.today-navigo-web/Navigo-Bold-Web.eot') format('eot');
     src: url('../Raif_Fonts/type.today-navigo-web/Navigo-Bold-Web.svg') format('svg');
     src: url('../Raif_Fonts/type.today-navigo-web/Navigo-Bold-Web.ttf') format('ttf');
     src: url('../Raif_Fonts/type.today-navigo-web/Navigo-Bold-Web.woff') format('woff');
     src: url('../Raif_Fonts/type.today-navigo-web/Navigo-Bold-Web.woff2') format('woff2');
+}
+
+@font-face {
+    /*font-family: 'Navigo';*/
+    /*src: url('../Raif_Fonts/type.today-navigo-desktop/Navigo-Black-Desktop.otf') format('otf');*/
+    /*src: url('../Raif_Fonts/type.today-navigo-desktop/Navigo-Bold-Desktop.otf') format('otf');*/
+    /*src: url('../Raif_Fonts/type.today-navigo-desktop/Navigo-Light-Desktop.otf') format('otf');*/
+    /*src: url('../Raif_Fonts/type.today-navigo-desktop/Navigo-Regular-Desktop.otf') format('otf');*/
 }
 
 * {
@@ -26,6 +37,11 @@
 
 body {
     font-family: 'ALS_Hauss', sans-serif;
+    color: #2B2D33;
+}
+
+button {
+    color: #2B2D33;
 }
 
 button:active, button:focus {
@@ -297,13 +313,14 @@ button::-moz-focus-inner {
 
 .main_calculate__caption {
     font-size: 48px;
-    padding-top: 72px;
     text-align: center;
+    padding-top: 30px;
 }
 
 .main_calculate__text {
     margin-top: 26px;
     text-align: center;
+    color: #808185;
 }
 
 /*form*/
@@ -419,6 +436,7 @@ button::-moz-focus-inner {
     width: 236px;
     height: 34px;
     background-image: url('../img/Progress.svg');
+    margin-bottom: 20px;
 }
 
 .main_promo__img p {
@@ -433,26 +451,36 @@ button::-moz-focus-inner {
     display: none;
 }
 
+.main_promo__btn-mob {
+    display: none;
+}
+
 .main_promo__caption, .main_promo__text, .benefits_sum1, .main_cashback__caption, .main_calculate__caption, .main_form__caption, .main_r__online__caption {
     font-weight: 600;
     font-family: 'Navigo', sans-serif;
+    color: #2B2D33;
+}
+
+.main_r__online__caption {
+    color: #fff;
 }
 
 .main_promo__caption, .main_promo__text {
     font-weight: 600;
     font-family: 'Navigo', sans-serif;
-    margin-top: 18px;
     font-size: 60px;
     color: #fff;
 }
 
 .main_promo__text {
+    font-size: 110px;
+}
+
+.main_promo__text span {
     font-size: 70px;
-    color: #fff;
 }
 
 .main_promo__btn {
-    margin-top: 53px;
     width: 265px;
     height: 54px;
     background: #FEE600;
@@ -471,6 +499,7 @@ button::-moz-focus-inner {
     width: 81%;
     margin: 47px auto;
     overflow: auto;
+    color: #808185;
 }
 
 .footer_text {
@@ -486,6 +515,7 @@ button::-moz-focus-inner {
     align-items: center;
     margin: 0 auto;
     font-size: 9px;
+    color: #55575C;
 }
 
 .footer_line1, .footer_line2 {
@@ -577,7 +607,7 @@ button::-moz-focus-inner {
     /*promo*/
 
     .main_promo {
-        height: 997px;
+        height: 1100px;
         display: flex;
         align-items: center;
         background-repeat: no-repeat;
@@ -588,6 +618,15 @@ button::-moz-focus-inner {
 
     .main_promo__btn {
         display: none;
+    }
+
+    .main_promo__btn-mob {
+        display: block;
+        width: 100%;
+        height: 121px;
+        background: #FEE600;
+        border: none;
+        font-size: 38px;
     }
 
     .promo {
@@ -663,8 +702,13 @@ button::-moz-focus-inner {
         background: #F4F4F4;
         border-radius: 20px;
         width: 80%;
+        height: 270px;
         padding: 25px;
-        margin: 30px auto;
+        margin: 0 auto;
+    }
+
+    .main_calculate__question {
+        margin-top: 20px;
     }
 
     .main_calculate__payment-text {
@@ -698,7 +742,22 @@ button::-moz-focus-inner {
         margin: 21px auto 24px;
     }
 
+    .main_calculate__text span {
+        display: none;
+    }
 
+    .main_calculate__sum2 {
+        margin-bottom: 20px;
+    }
+
+    .main_r__online__btn {
+        display: none;
+        margin-top: 50px;
+    }
+
+    .benefits_text {
+        font-size: 24px;
+    }
 
     /*form*/
     .form {
